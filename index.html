@@ -29,7 +29,7 @@ blah, blah, blah, blah
 <html> <!--shows that this is html script below-->
 	
    <head> <!--shows that this is the head of the page-->
-      <title>Cold or Allergies</title>   <!--title of page-->
+      <title>Do You Have Anxiety Quiz</title>   <!--title of page-->
       <meta name="viewport" content="width=device-width, initial-scale=1"> <!--dimensions/way the page is viewed-->
       <meta name="apple-mobile-web-app-capable" content="yes"> <!--fits to phone screen-->
       <link rel="stylesheet" href="w3.css"> <!--creates sytle of each page-->
@@ -51,25 +51,25 @@ blah, blah, blah, blah
        alert("This file last modified  " + docMod); //creates the alert to show up//
        console.log("This file last modified  " + docMod); //shows what will be shown on the console//
 
-        var allergy_count = 0; //variable for allergy so when click on button the formula knows that to add//
-        var cold_count = 0; //variable for cold so when click on button the formula knows what to add//
+        var anxiety_count = 0; //variable for anxiety so when click on button the formula knows that to add//
+        var notanxiety_count = 0; //variable for not having so when click on button the formula knows what to add//
 
 
-        function allergyAdd(){ //starts the function of the allergy counting//
-            allergy_count = allergy_count + 1; //when click on yes/no adds one to allergy//
-		alert(allergy_count); //shows popup alert when click on button//
+        function anxietyAdd(){ //starts the function of the anxiety counting//
+            anxiety_count = anxiety_count + 1; //when click on yes/no adds one to anxiety//
+		alert(anxiety_count); //shows popup alert when click on button//
 
         }
 
-        function coldAdd(){ //starts the function of the cold counting//
-            cold_count = cold_count + 1;//when click on yes/no adds one to cold//
-		alert(cold_count); //added to count cold//
+        function notanxietyAdd(){ //starts the function of the notanxiety counting//
+            notanxiety_count = notanxiety_count + 1;//when click on yes/no adds one to notanxiety//
+		alert(notanxiety_count); //added to count notanxiety//
         }
  	function getResults(){ //starts function for getResults//
-	var allergyPercent= allergy_count/6 * 100 //variable for allergy percent//
-	var coldPercent= cold_count/6 * 100  //variable for cold percent//
+	var anxietyPercent= anxiety_count/6 * 100 //variable for anxiety percent//
+	var notanxietyPercent= notanxiety_count/6 * 100  //variable for notanxiety percent//
 	var ResultText = document.getElementById("Results"); //variable for the results part//
-		ResultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; //formula for the results part//
+		ResultText.innerHTML = "Probability you have anxiety =" + anxietyPercent + "<br> Probability you don't have anxiety =" + notanxietyPercent; //formula for the results part//
 	}
 
   </script> <!--end Java Script-->
@@ -100,11 +100,11 @@ blah, blah, blah, blah
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot"> <!--creates format for header of page-->
-	<h1>Cold or Allergies?</h1> <!--I changed Hello World to Cold or Allergies?-->
+	<h1>Do You Have Anxiety?</h1> <!--I changed Hello World to Cold or Allergies?-->
 </div> <!--ends header of page-->
 	
 <div id="content" class="w3-container"> <!--specifies that this is the content of the page-->
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Do you feel like you might have an anxiety order? Answer these six questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -123,9 +123,9 @@ blah, blah, blah, blah
 	</div> <!--ends header for page-->
 	
     	<div id="content" class="w3-container"> <!--starts content of page-->
-        	<p>Are your eyes watery or itchy?</p> <!--I changed Question 1 to are your eyes watery or itchy?-->
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--I inserted this yes button and allowed it to be added once to the results if it is clicked on-->
-		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--I inserted this no button and allowed it to be added once to the results if it is clicked on-->
+        	<p>Do you commonly experience the following symptoms: increased heart rate, hyperventilation, sweating, trembling, or GI (digestive) problems in everyday experiences? </p> <!--script for first question-->
+		<a href="#two"  onclick="anxietyAdd();" class="w3-btn w3-black"> Yes</a> <!--I inserted this yes button and allowed it to be added once to the results if it is clicked on-->
+		<a href="#two"  onclick="notanxietyAdd();" class="w3-btn w3-black"> No</a> <!--I inserted this no button and allowed it to be added once to the results if it is clicked on-->
 	 </div><!-- /content -->
 
 <footer class="w3-bottom w3-container w3-flat-carrot"> <!--adds footer-->
@@ -140,9 +140,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container"> <!--below is content for page 3-->
-		<p>Do you have a fever?</p> <!--Question2-->
-		<a href="#three"   onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!--I inserted this no button for allergies and allowed it to be added once to the results page-->
-		<a href="#three"   onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--I inserted this yes button for cold and allowed it to be added once to the results page-->
+		<p> Does your worrying often become a singular focus in your life?</p> <!--Question2-->
+		<a href="#three"   onclick="anxietyAdd();" class="w3-btn w3-black"> Yes</a> <!--I inserted this yes button for anxiety and allowed it to be added once to the results page-->
+		<a href="#three"   onclick="notanxietyAdd();" class="w3-btn w3-black"> No</a> <!--I inserted this no button for notanxiety and allowed it to be added once to the results page-->
 	</div><!--/end of Question 2 page-->	
 
 <footer class="w3-bottom w3-container w3-flat-carrot"> <!--adds footer-->
@@ -158,9 +158,9 @@ blah, blah, blah, blah
 	 </div> <!--this is so the below content is a page-->
 	
 	 <div id="content" class="w3-container"> <!--below is the content on page 3-->
-		 <p>Do you have a sore throat?</p> <!--question on the page-->
-		 <a href="#four"    onclick="allergyAdd();" class="w3-btn w3-black">  No</a> <!--no button for allergies adds to results-->
-		 <a href="#four"    onclick="coldAdd();" class="w3-btn w3-black">  Yes</a> <!--yes button for cold adds to results-->
+		 <p>Can you control your worrying?</p> <!--question on the page-->
+		 <a href="#four"    onclick="notanxietyAdd();" class="w3-btn w3-black">  Yes</a> <!--no button for notanxiety adds to results-->
+		 <a href="#four"    onclick="anxietyAdd();" class="w3-btn w3-black">  No</a> <!--yes button for anxiety adds to results-->
 	</div> <!--end of Question 3 content part of pagepage-->
 <footer class="w3-bottom w3-container w3-flat-carrot"> <!--adds footer-->
 	<p>4</p> <!--labels footer-->
@@ -175,9 +175,9 @@ blah, blah, blah, blah
 	</div> <!--starts the content below for Question 4 page-->
 	
 	<div id="content" class="w3-container"> <!--below is the content for page 4-->
-		<p>Are your symptoms seasonal or chronic?</p> <!--question 4 header-->
-		<a href="#five"   onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--yes button for allergies adds to results-->
-		<a href="#five"   onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--no button for allergies adds to results-->
+		<p>Do you have trouble falling asleep and/or feel tired after waking up from a normal night’s rest?</p> <!--question 4 header-->
+		<a href="#five"   onclick="anxietyAdd();" class="w3-btn w3-black"> Yes</a> <!--yes button for anxiety adds to results-->
+		<a href="#five"   onclick="notanxietyAdd();" class="w3-btn w3-black"> No</a> <!--no button for notanxiety adds to results-->
 	</div> <!--end of Question 4 content part of page-->	
 
 <footer class="w3-bottom w3-container w3-flat-carrot"> <!--adds footer-->
@@ -193,9 +193,9 @@ blah, blah, blah, blah
 	</div> <!--starts the content for Question 5 page-->
 	
 	<div id="content" class="w3-container"> <!--below is content for page 5-->
-		<p>Do you have a rash?</p> <!--question 5 header-->
-		<a href="#six"   onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--yes button for allergies adds to results-->
-		<a href="#six"   onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--no button for allergeis adds to results-->
+		<p>Can you identify what you fear or are worrying about?</p> <!--question 5 header-->
+		<a href="#six"   onclick="notanxietyAdd();" class="w3-btn w3-black"> Yes</a> <!--yes button for notanxiety adds to results-->
+		<a href="#six"   onclick="anxietyAdd();" class="w3-btn w3-black"> No</a> <!--no button for anxiety adds to results-->
 	</div> <!--end of Question 5 content part of page-->	
 
 <footer class="w3-bottom w3-container w3-flat-carrot"> <!--adds footer-->
@@ -211,9 +211,9 @@ blah, blah, blah, blah
 	</div> <!--starts content for Question 6 page-->
 	
 	<div id="content" class="w3-container"> <!--below is content for page 6-->
-		<p>Do you have aches and pains?<p/> <!--question 6 header-->
-		<a href="#seven"   onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!--no button for allergies adds to the results and brings it to the results page-->
-		<a href="#seven"   onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--yes button for cold adds to the results and brings it to the results page-->
+		<p>Do you avoid situations that may make you feel anxious?<p/> <!--question 6 header-->
+		<a href="#seven"   onclick="anxietyAdd();" class="w3-btn w3-black"> Yes</a> <!--yes button for anxiety adds to the results and brings it to the results page-->
+		<a href="#seven"   onclick="notanxietyAdd();" class="w3-btn w3-black"> No</a> <!--no button for notanxiety adds to the results and brings it to the results page-->
 	</div> <!--end of Question 6 content part of the page-->
 <footer class="w3-bottom w3-container w3-flat-carrot"> <!--adds footer-->
 	<p>7</p> <!--labels footer-->
